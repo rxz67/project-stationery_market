@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 body{
@@ -34,7 +33,6 @@ nav a{
     text-decoration: none;
     color:#111827;
     font-weight: 600;
-
 }
 
 .buttons{
@@ -48,25 +46,26 @@ button{
     padding: 12px 25px;
     border: none;
     border-radius: 12px;
-    font-weight: 600px;
+    cursor: pointer;
+    font-weight: 600;
+    transform: 0.3s;
     background: #2563eb;
-    color:#ffffff;
-    display: flex;
-    margin: left auto;
-
+    color:#ffffff
 }
 
 button:hover{
     transform: translateY(-3px);
 }
 
-
+.login{
+    background:#cdd1d6;
+    color:#111827;
+}
 
 .seller{
     background: #f59e0b;
     margin: 20px;
 }
-
 
 .hero{
     display: flex;
@@ -99,7 +98,6 @@ button:hover{
     font-size: 18px;
     color: #475569;
     margin-bottom: 30px;
-
 }
 
 .hero-buttons{
@@ -182,7 +180,7 @@ button:hover{
 }
 
 .category{
-    background: rgb(255, 255, 255);
+    background: white;
     padding: 35px;
     border-radius: 20px;
     text-align: center;
@@ -195,12 +193,11 @@ button:hover{
     background:#2563eb;
     color:white;
     transform: translateY(-5px);
-
 }
 
 footer{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 60px;
     background:#111827;
     color:white;
@@ -213,11 +210,6 @@ footer h3{
 footer p{
     margin-bottom: 10px;
     color:#cdb5e1;
-}
-
-header{
-    flex-direction: column;
-    gap:20px
 }
 
 .hero{
@@ -237,5 +229,67 @@ header{
 }
 
 footer{
+    flex-direction: column;
     gap:30px;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.more-wrap{
+    position: relative;
+    outline: none;
+}
+
+.more-btn{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f59e0b;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    min-width: 210px;
+    z-index: 100;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+.more-wrap:focus-within .dropdown{
+    display: block;
+}
+
+.dropdown a{
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #111827;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.dropdown a:last-child{
+    border-bottom: none;
+}
+
+.dropdown a:hover{
+    background: #f3f4f6;
 }
